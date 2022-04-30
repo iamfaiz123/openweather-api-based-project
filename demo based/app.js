@@ -12,7 +12,7 @@ server.get("/",(req,res)=>
 server.post("/",(req,res)=>{
 
     const cityname = req.body.cityName;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=da4c2c05e6604aa3b59a1f17381fc341`
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=<yourApiKey>`
      http.get(url,(RES)=>
      { RES.on("data",(data)=>{
          let wdata = JSON.parse(data);
